@@ -1,0 +1,15 @@
+---
+- hosts: all
+  vars_prompt:
+    - name: user
+      prompt: "eneter ssh user"
+    - name: password
+      prompt: "enter password for ssh user"
+  vars:
+    ansible_user: "{{ user }}"
+    ansible_password: "{{ password }}"
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+  tasks:
+  - name: run ping
+    ping:
