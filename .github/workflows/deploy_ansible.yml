@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: ./.github/action/ansible
+    - uses: ./.github/actions/ansible
