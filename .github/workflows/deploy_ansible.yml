@@ -12,5 +12,5 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     step:
-    - uses: actions.checkout@v1
+    - uses: actions/checkout@v1
     - uses: ./.github/action/ansible
